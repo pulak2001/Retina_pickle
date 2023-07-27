@@ -1,4 +1,3 @@
 env
 model
 pickle/effnet_b5_model.pkl
-.gitattributes
