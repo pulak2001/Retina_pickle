@@ -141,8 +141,8 @@ def success():
                 severity = class2[category]
                 return render_template('result2.html', name=f.filename, link=f.filename, disease={}, severity=severity, severity_val=category_val, model=model_choose, severite_score=category_score)
         else:
-            with open('pickle/CNN.pkl', 'rb') as f:
-                model_architecture, model_weights = pickle.load(f)
+            with open('pickle/CNN.pkl', 'rb') as file:
+                model_architecture, model_weights = pickle.load(file)
                 loaded_model = tf.keras.models.model_from_json(model_architecture,  custom_objects={'KerasLayer': hub.KerasLayer})
 
                     # Set the model weights
