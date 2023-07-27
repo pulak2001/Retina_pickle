@@ -159,7 +159,6 @@ def success():
                     if (round(proba[0][sorted_categories[i]], 3)) >= 0.1:
                         disease[classes[sorted_categories[i]]] = (round(proba[0][sorted_categories[i]]*100, 2))
                 print(disease)
-                print(category_val)
                 return render_template("result2.html", name = f.filename, link=f.filename, disease=disease, severity='severity', severity_val=0, model=model_choose, severite_score=0)  
     
 if __name__ == '__main__':  
