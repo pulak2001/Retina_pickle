@@ -190,6 +190,9 @@
             {% elif model == 2 %}
                 <div class="model2">
                     <h4 class="text-light">Retinal Disease Classification</h4>
+                    {% if disease | length == 0 %}
+                      <h6 class="text-light">✅ No disease found</h6>
+                    {% else %}
                     <table class="table table-striped m-2">
                     <tr>
                       <th class="fs-4">Disease name</th>
@@ -204,6 +207,7 @@
                     </tr>
                   {% endfor %}
                   </table>
+                  {% endif %}
                   <form action="/" method="get" class="m-4">
                     <button type = "submit" class="btn btn-primary">Upload Again</button>
                 </form>
